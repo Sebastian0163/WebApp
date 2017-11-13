@@ -1,17 +1,33 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    @*<div class="col-md-3 col-md-offset-3">
+        <h1 class="brand" id="top">Підвал&nbsp;Елеміра</h1>
+    </div>*@
+      <div class="container">
+          <h1 class="brand" id="top">Підвал&nbsp;Елеміра</h1>
+           <h3>@ViewBag.Message</h3>
+        <div class="row">            
+            <div class="col-lg-9 col-md-8 col-sm-12">                
+                <iframe style="pointer-events: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30079.39280237743!2d22.654266773908155!3d48.21301375131555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47384569b0dda9b5%3A0xe8f1ddf5297252ae!2z0JrRltC00LXRiCwg0JfQsNC60LDRgNC_0LDRgtGB0YzQutCwINC-0LHQu9Cw0YHRgtGMLCDQo9C60YDQsNGX0L3QsCwgOTAyNDM!5e0!3m2!1suk!2sua!4v1459867767679"
+                        width="100%" height="400" allowfullscreen></iframe>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="contacts">
+                    <br />
+                    <strong>Номера телефонов:</strong>
+                    <ul>
+                        <li><i class="fa fa-mobile fa-lg"></i>+38-(095)-523-76-48</li>
+                        <li><i class="fa fa-mobile fa-lg"></i>+38-(093)-383-01-74</li>
+                        <li><i class="fa fa-mobile fa-lg"></i>+38-(066)-727-72-99</li>
+                    </ul>
+                    <strong>Facebook:</strong>
+                    <a href="https://www.facebook.com/keyswine/">Підвал Елеміра</a> <br />
+                    <strong>Email:</strong>
+                    <a href="mailto:keyswine@gmail.com">keyswine@gmail.com</a> <br />
+                    <strong>ВКонтакті:</strong>
+                    <a href="https://vk.com/keyswine" target="_blank"><i class="fa fa-vk fa-lg"></i>vk.com/keyswine</a>
+                </div>
+            </div>
+        </div>
+    </div>

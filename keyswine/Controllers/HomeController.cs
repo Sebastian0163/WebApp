@@ -22,7 +22,7 @@ namespace keyswine.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Закарпатська область, Берегівський район, село Кідьош, вул Темплома 2";
 
             return View();
         }
