@@ -58,11 +58,11 @@ namespace keyswine
                appId: "294086341090306",
                appSecret: "ac70a958f4cef0392c49337080994295");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "576977472928-is3ldbc5nhci631jpbcfmpp6i7e30dd0.apps.googleusercontent.com",
+                ClientSecret = "J1ZbR-Q23x0-wTMzBLBqxIu4"
+            });
         }
     }
 }
