@@ -221,6 +221,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711091230312_InitialCreate.cs" />
+    <Compile Include="Migrations\201711091230312_InitialCreate.Designer.cs">
+      <DependentUpon>201711091230312_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711131533490_Users.cs" />
+    <Compile Include="Migrations\201711131533490_Users.Designer.cs">
+      <DependentUpon>201711131533490_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -306,7 +315,14 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711091230312_InitialCreate.resx">
+      <DependentUpon>201711091230312_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711131533490_Users.resx">
+      <DependentUpon>201711131533490_Users.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
