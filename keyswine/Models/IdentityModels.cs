@@ -24,6 +24,9 @@ namespace keyswine.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Winemaker> Winemakers { get; set; }
+        public DbSet<Wine> Wines { get; set; }
+        public DbSet<Category> Categorys { get; set; }
 
         public static ApplicationDbContext Create()
         {
