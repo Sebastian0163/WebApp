@@ -20,8 +20,7 @@ namespace keyswine.Models
 
     public class ApplicationDbContext : IdentityDbContext<UsersTables>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("DefaultConnection")
         {
         }
         public DbSet<Winemaker> Winemakers { get; set; }
