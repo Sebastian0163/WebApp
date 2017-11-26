@@ -7,8 +7,6 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using keyswine.Models;
-using System.Collections.Generic;
-using System.Data.Entity;
 
 
 namespace keyswine.Controllers
@@ -18,6 +16,7 @@ namespace keyswine.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        
 
         public ManageController()
         {
@@ -335,27 +334,12 @@ namespace keyswine.Controllers
 
             base.Dispose(disposing);
         }
-        [HttpGet]
-        public ActionResult CreateCategory()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult CreateCategory(Category category)
-        {
-            ApplicationDbContext db = new ApplicationDbContext();
-            //Добавляем игрока в таблицу
-            db.Categorys.Add(category);
-            db.SaveChanges();
-
-            return RedirectToAction("CreateCategory", "Manage");
-            
-        }
-       
-      
 
 
-
+        
+          
+        
+        
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
