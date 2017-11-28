@@ -11,13 +11,13 @@ namespace keyswine.Controllers
     public class WineController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();
+             
         // GET: Wine
         public ActionResult Index()
-
         {
-            var winemakers = db.Wines.Include(p => p.Winemaker).Include(p=>p.Category);
-                 return View(winemakers.ToList());
-            
+            var winemakers = db.Wines.Include(p => p.Winemaker).Include(p => p.Category);
+            return View(winemakers.ToList());
+
         }
 
         // GET: Wine/Details/5

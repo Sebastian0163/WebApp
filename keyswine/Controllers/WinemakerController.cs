@@ -16,6 +16,11 @@ namespace keyswine.Controllers
         {
             return View(db.Winemakers);
         }
+        // GET: Category
+        public ActionResult Admin()
+        {
+            return View(db.Winemakers);
+        }
         /// <summary>
         /// Вначале добавим в контроллер действие, которые будет получать по Id модель и выводить в представление ее свойства для редактирования
         /// </summary>
