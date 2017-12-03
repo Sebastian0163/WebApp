@@ -27,26 +27,35 @@ namespace keyswine.Controllers
         }
 
         // GET: Wine/Create
+
+        [HttpGet]
         public ActionResult Create()
         {
+            SelectList category = new SelectList(db.Categorys, "Id", "Name");
+            ViewBag.Categorys = category;
+            // Формируем список команд для передачи в представление
+            SelectList winemaker = new SelectList(db.Winemakers, "Id", "Name");
+            ViewBag.Winemakers = winemaker;
             return View();
         }
-
         // POST: Wine/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Wine wine)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            //Добавляем игрока в таблицу
+            db.Wines.Add(wine);
+            db.SaveChanges();
+            // перенаправляем на главную страницу
+            return RedirectToAction("Index");
         }
+
+       
+
+       
+        
+
+
+
 
         // GET: Wine/Edit/5
         public ActionResult Edit(int id)
