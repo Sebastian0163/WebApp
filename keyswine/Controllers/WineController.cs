@@ -31,22 +31,28 @@ namespace keyswine.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            SelectList category = new SelectList(db.Categorys, "Id", "Name");
-            ViewBag.Categorys = category;
-            // Формируем список команд для передачи в представление
-            SelectList winemaker = new SelectList(db.Winemakers, "Id", "Name");
-            ViewBag.Winemakers = winemaker;
+            
+                SelectList category = new SelectList(db.Categorys, "Id", "Name");
+                ViewBag.Categorys = category;
+                // Формируем список команд для передачи в представление
+                SelectList winemaker = new SelectList(db.Winemakers, "Id", "Name");
+                ViewBag.Winemakers = winemaker;
+            
             return View();
         }
         // POST: Wine/Create
         [HttpPost]
-        public ActionResult Create(Wine wine)
+        public ActionResult Create([Bind(Include = "ID,Name,Email,Phone,PurchaseDate")]Wine wine)
         {
-            //Добавляем игрока в таблицу
-            db.Wines.Add(wine);
-            db.SaveChanges();
-            // перенаправляем на главную страницу
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                //Добавляем игрока в таблицу
+                db.Wines.Add(wine);
+                db.SaveChanges();
+                // перенаправляем на главную страницу
+                return RedirectToAction("Index");
+            }
+            return View(wine);
         }
 
        

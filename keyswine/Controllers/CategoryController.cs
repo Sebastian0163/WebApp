@@ -56,12 +56,16 @@ namespace keyswine.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(Category category)
+        public ActionResult Create([Bind(Include = "Id,Name")]Category category)
         {
-            db.Entry(category).State = EntityState.Added;
-            db.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                db.Entry(category).State = EntityState.Added;
+                db.SaveChanges();
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            return View(category);
         }
         /// <summary>
         /// удаление модели

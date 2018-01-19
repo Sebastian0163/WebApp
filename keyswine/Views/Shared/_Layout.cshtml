@@ -12,6 +12,9 @@
    
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-3.2.1.min.js")
+    @Scripts.Render("~/Scripts/validate.min.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")
 
 </head>
 <body>
@@ -38,6 +41,18 @@
                         @*<li role="separator" class="divider"></li>*@
                         <li>@Html.ActionLink("Білі вина", "White", "Home")</li>
                         <li>@Html.ActionLink("Червоні вина", "Red", "Home")</li>
+                        <hr />
+                        <li>@Html.ActionLink("WCreate", "Create", "Wine")</li>
+                        <li>@Html.ActionLink("WIndex", "Index", "Wine")</li>
+                        <hr />
+                        <li>@Html.ActionLink("CCreate", "Create", "Category")</li>
+                        <li>@Html.ActionLink("CIndex", "Index", "Category")</li>
+                        <hr />
+                        <li>@Html.ActionLink("WCreate", "Create", "Winemaker")</li>
+                        <li>@Html.ActionLink("WAdmin", "Admin", "Winemaker")</li>
+                        <li>@Html.ActionLink("WIndex", "Index", "Winemaker")</li>
+
+                        
                     </ul>                   
                 </li>
                 <li>@Html.ActionLink("Фотогалерея", "Contact", "Home")</li>
